@@ -1,0 +1,296 @@
+.ct-menu 
+{
+    text-align: center;
+
+    .redes-sociais 
+    {
+        display: inline-block;
+        margin: 20px 0;
+    }
+
+}
+
+.menu 
+{
+    background-color: transparent;
+    border: 0 none;
+    display: inline-block;
+
+    .nav-menu 
+    {
+        display: inline-block;
+        padding: 0;
+        margin: 20px 0;
+
+        li 
+        {
+            display: inline-block;
+            margin: 0 20px;
+
+            a 
+            {
+                color: $menuColor;
+                display: block;
+                font-size: $fontSizeBase * 1.3;
+                font-family: $primaryFont;
+                padding-bottom: 5px;
+                position: relative;
+                text-transform: uppercase;
+                transition: $transitionAll;
+    
+                &::before 
+                {
+                    content: "";
+                    background-color: $colorDestaque;
+                    width: 0;
+                    height: 4px;
+                    position: absolute;
+                    bottom: 0;
+                    transition: $transitionAll3s;
+                }
+    
+                &.ativo,
+                &:hover 
+                {
+                    &::before 
+                    {
+                        width: 100%;
+                    }
+                }
+    
+            }
+    
+            &.especial 
+            {
+                a  
+                {
+                    font-size: $fontSizeBase * 1.7;
+                    &::before 
+                    {
+                        display: none;
+                    }
+                }
+            }            
+
+        }
+
+    }
+
+}
+
+// #hd-principal
+// {
+//     background: $secondaryColor;
+//     border-bottom: 1px solid transparent;
+//     padding: 30px 0;
+//     width: 100%;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 90;
+//     transition: $transitionAll;
+
+//     @include breakpoint($allCelular)
+//     {
+//         border-bottom-color: #f1f1f1;
+//         padding: 10px 0;
+//     }     
+
+//     .redes-sociais
+//     {
+//         @include breakpoint($allCelular)
+//         {
+//             display: none;
+//         }
+//     }
+// }
+
+// .ss-box-header 
+// {
+//     @include make-sm-column(4);
+//     @include make-md-column(4);
+//     @include make-lg-column(4);
+//     text-align: center;
+
+//     @include breakpoint($allCelular)
+//     {
+//         float: left;
+//         width: 33.33333%;
+//         padding: 0;     
+//     }  
+
+// }
+
+// .logo 
+// {
+//     display: block;
+//     width: 215px;
+//     margin: 0 auto;
+//     transition: $transitionAll;
+
+//     @include breakpoint($smallDesktop)
+//     {
+//         width: 150px;
+//     }
+
+//     @include breakpoint($tablet)
+//     {
+//         width: 150px;
+//     } 
+    
+//     @include breakpoint($allCelular)
+//     {
+//         width: 130px;
+//     }     
+
+//     img
+//     {
+//         width: 100%;
+//         transition: $transitionAll;
+//         @include breakpoint($allCelular)
+//         {
+//             margin-left: -18px;
+//         }      
+//     }
+// }
+
+// .menu 
+// {
+//     float: right;
+//     transition: $transitionAll;
+
+//     @include breakpoint($allCelular)
+//     {
+//         margin-top: 25px;
+//     }  
+
+//     @include breakpoint($smallCelular)
+//     {
+//         //margin-top: 0;
+//     }      
+
+//     h6 
+//     {
+//         color: $primaryColor;
+//         display: inline-block;
+//         font-size: $fontSizeBase * 1.5;
+//         line-height: 1.2em;
+//         font-weight: $fontWeightSemiBold;
+//         margin: 8px 20px;
+//         @include breakpoint($smallCelular)
+//         {
+//             display: none;
+//         }         
+//     }
+
+//     #menu-mobile 
+//     {
+//         position: relative;
+//         float: right;
+//         padding: 0;
+//         margin: 0;
+//         background-color: transparent;
+//         background-image: none;
+//         border: 0 none;
+//         border-radius: 0;
+//         outline: none;       
+
+//         .icon-bar
+//         {
+//             background-color: $colorDestaque1;
+//             display: block;
+//             border-radius: 8px;
+//             width: 50px;
+//             height: 8px;
+//             & +.icon-bar
+//             {
+//                 margin-top: 5px;
+//             }
+//         }        
+
+//     }
+
+//     .menu-nav 
+//     {
+//         display: none;
+//         margin-top: 15px;
+//         background: $colorDestaque1;
+//         padding: 15px;
+//         position: absolute;
+//         width: 350px;
+//         right: 15px;
+//         z-index: -10;
+        
+//         @include breakpoint($allCelular)
+//         {
+//             right: 0;
+//             width: 100%;
+//             position: fixed;
+//             top: 88px;            
+//         }
+
+//         ul 
+//         {
+//             border: 3px dashed #fff;
+//             margin: 0;
+//             padding: 20px 0;
+
+//             li 
+//             {
+//                 list-style: none;
+//                 margin: 0;
+//                 padding: 0;
+//             }
+
+//             a 
+//             {
+//                 color: $secondaryColor;
+//                 display: inline-block;
+//                 font-size: $fontSizeBase * 2.1;
+//                 font-weight: $fontWeightMedium;
+//                 line-height: 1.5em;
+//                 padding: 10px 25px;
+
+//                 @include breakpoint($smallDesktop)
+//                 {
+//                     font-size: $fontSizeBase * 1.8;
+//                 }  
+
+//                 @include breakpoint($tablet)
+//                 {
+//                     font-size: $fontSizeBase * 1.8;
+//                 } 
+                
+//                 @include breakpoint($allCelular)
+//                 {
+//                     font-size: $fontSizeBase * 1.5;
+//                 }                 
+
+//             }
+
+//         }
+//     }
+
+// }
+
+// /* Quando o usuário usar o scroll diminui o header */
+
+// .smaller-menu
+// {
+//     #hd-principal
+//     {
+//         border-bottom-color: #f1f1f1;
+//         padding: 10px 0;
+//     }
+
+//     .logo 
+//     {
+//         width: 130px;
+//     }
+
+//     .menu,
+//     .redes-sociais 
+//     {
+//         margin-top: 25px;
+//     }
+// }

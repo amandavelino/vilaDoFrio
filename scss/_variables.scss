@@ -1,0 +1,45 @@
+$colorDestaque: #0095da;
+
+//Background Colors
+$bgColorPrimary: #085679;
+$bgColorSecondary: #721b1d;
+$bgColorThird: #0095da;
+$bgColorFourth: #bce7fb;
+$bgColorFifthy: #0972a1;
+$bgColorInput: #e5e6e6;
+
+//Cores
+$menuColor: #085679;
+$primaryColor: #4e4e4e;  
+$secondaryColor: $colorDestaque;
+
+//Border Cores
+
+//Fontes  
+$primaryFont: 'Montserrat', sans-serif;
+
+$fontSizeBase: 10px;
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+
+//Transitions
+$borderRadius: 100%;
+$transitionAll: all .5s ease-in-out;
+$transitionAll3s: all .3s ease-in-out;
+
+//Media Queries
+
+    //Desktops
+    $largeDesktop: 1200px; // > 1200px
+    $smallDesktop: 992px 1199px; // entre 1200px e 992px 
+    $allDesktop: 992px; // > 992px
+
+    //Tablets
+    $tablet: 768px 991px; //tablets portrait: 
+
+    //Celular
+    $celular: 768px;
+    $allCelular: 0 767px; // todos os dispositivos móveis < 768px
+    $largeCelular: 481 767px;
+    $smallCelular: 0 480px; 

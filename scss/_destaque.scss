@@ -1,0 +1,260 @@
+.destaque-topo
+{
+    float: left;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    .logo-01
+    {
+        float: left;
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+
+    .imagem-destaque-topo
+    {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        margin-left: -120px;
+    }
+
+    .logo-02 
+    {
+        float: right;
+        margin-top: 40px;
+        margin-right: 50px;
+    }
+
+}
+
+.destaque-bottom 
+{
+    clear: both;
+    padding-top: 31px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+
+    .imagem-destaque-bottom 
+    {
+        img 
+        {
+            max-width: 100%;
+        }
+    }
+
+    .col-row
+    {
+        @include make-row();
+    }
+
+    .col-destaque 
+    {
+        header 
+        {
+            margin-bottom: 30px;
+            text-align: center;
+
+            h3 
+            {
+                color: $colorCadastrese;
+                font-size: $fontSizeBase * 4;
+                line-height: 1em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .col-lft 
+    {
+        //@include make-lg-column(6);
+        background-color: $bgColorPrimary;
+        box-shadow: inset 0px 0px 60px 0px rgba(17,17,17,.8);
+        float: left;
+        padding: 20px;
+        width: 55%;
+    }
+
+    .col-rgt 
+    {
+        //@include make-lg-column(6);
+        background-color: $bgColorPrimary;
+        float: left;
+        width: 45%;
+
+        .col-rgt-topo
+        {
+            background-color: $bgColorSecondary;
+            height: 160px;
+            padding: 30px 20px 0;
+        }
+
+        .col-rgt-bottom
+        {
+            background-color: $bgColorThird;
+            height: 174px;
+            padding: 10px 20px 20px;
+            overflow: hidden;
+        }
+
+    }
+
+    .info-valor 
+    {
+        position: relative;
+        overflow: hidden;
+
+        p 
+        {
+            color: #fff;
+            display: inline-block;
+            font-size: $fontSizeBase * 1.5;
+            line-height: 1em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        h3 
+        {
+            color: $colorCadastrese;
+            font-size: $fontSizeBase * 8;
+            margin: 0;
+            margin-top: -45px;
+            padding: 0;
+            text-transform: uppercase;
+            overflow: hidden;
+
+            .moeda 
+            {
+                font-size: $fontSizeBase * 8;
+            }
+
+            .valorNumber
+            {
+                font-size: $fontSizeBase * 13.5;
+                line-height: 1em;
+            }
+
+            .moeda,
+            .valor
+            {
+                line-height: 2.2em;
+            }
+
+            .moeda,
+            .valor,
+            .valorNumber 
+            {
+                float: left;
+            }
+        }
+
+    }
+
+    .info-seguranca 
+    {
+        .plus 
+        {
+            color: #fff;
+            float: left;
+            font-size: $fontSizeBase * 15;
+            font-weight: $fontWeightBold;
+            line-height: .65em;
+        }
+
+        h3 
+        {
+            color: #fff;
+            float: left;
+            overflow: hidden;
+            line-height: 1em;
+            margin: 22px 5px;
+
+            .txt-seguranca 
+            {
+                font-size: $fontSizeBase * 5.4;
+                line-height: 1em;
+            }
+
+            .txt-fim 
+            {
+                display: block;
+                font-size: $fontSizeBase * 3.5;
+                font-weight: $fontWeightNormal;
+                line-height: 1.2em;
+                letter-spacing: 1px;
+            }
+
+            .selo 
+            {
+                float: left;
+            }
+        }
+    }
+
+}
+
+.formulario 
+{
+
+    fieldset
+    {
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 30px;
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }   
+    }
+
+    .campo 
+    {
+        text-align: center;
+        display: inline-block;
+        width: 49%;
+
+        p 
+        {
+            color: #fff;
+            font-size: $fontSizeBase * 1.8;
+            line-height: 1em;
+            margin: 0 0 5px 0;
+        }
+
+        .input 
+        {
+            background-color: $bgColorInput;
+            border: 0 none;
+            border-radius: 5px;
+            outline: none;
+            padding: 10px;
+        }
+    }
+
+    .btn-enviar
+    {
+        border: 0 none;
+        border-bottom: 4px solid $bgColorThird;
+        background: transparent;
+        color: #fff;
+        display: inline-block;
+        font-size: $fontSizeBase * 1.9;
+        font-weight: $fontWeightBold;
+        line-height: 1.2em;
+        outline: none;
+        text-transform: uppercase;
+        transition: $transitionAll;
+
+        &:hover 
+        {
+            color: $colorSubmitBtn;
+        }
+    }
+
+}

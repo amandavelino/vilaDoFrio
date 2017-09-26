@@ -22,8 +22,8 @@
                     <ul class="nav-menu">
                         <li><a class="ativo" href="#">Home <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Cadastre-se</a></li>
-                        <li><a href="#">Informações</a></li>
-                        <li><a href="#">Localização</a></li>                    
+                        <li class="espaco-right"><a href="#">Informações</a></li>
+                        <li class="espaco-left"><a href="#">Localização</a></li>                    
                         <li><a href="#">Plantas</a></li>
                         <li><a href="#">Contato</a></li> 
                         <li class="especial">

@@ -1,0 +1,228 @@
+#ss-galeria
+{
+    background: $bgGaleria;
+    padding: 40px 0 10px;
+
+    .ss-galeria-row 
+    {
+        float: left;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .ss-box-galeria 
+    {
+        text-align: center;
+
+        header 
+        {
+            padding-bottom: 40px;
+            h3 
+            {
+                color: $colorTituloGaleria;
+                font-size: $fontSizeBase * 3.6;
+                line-height: 1em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .ss-box-apartamento
+    {
+        width: 50%;
+        float: left;
+    }
+
+    .ss-box-informacoes
+    {
+        width: 43%;
+        float: right;
+    }
+
+    .ss-box-informacoes 
+    {
+
+        .box-informacoes 
+        {
+            .abas 
+            {
+                background: #fff;
+                float: left;
+                width: 100%;
+            }
+
+            .aba 
+            {
+                float: left;
+                width: 33.3333%;
+                text-align: center;
+
+                a 
+                {
+                    color: #717171;
+                    display: block;
+                    font-size: $fontSizeBase * 1.4;
+                    line-height: 1em;
+                    padding: 25px 10px;
+                    position: relative;
+                    text-align: center;
+                    transition: $transitionAll3s;
+
+                    &::after 
+                    {
+                        content: "";
+                        display: block;
+                        width: 0; 
+                        height: 0; 
+                    
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-top: 8px solid transparent;   
+                        
+                        position: absolute;
+                        bottom: -8px;
+                        left: 50%;  
+                        margin-left: -10px;
+                        transition: $transitionAll3s;                      
+                    } 
+
+                    &.selecionada 
+                    {
+                        &::after 
+                        {
+                            border-top-color: $colorDestaque;                     
+                        }                        
+                    }
+
+                    &:hover,
+                    &.selecionada
+                    {
+                        background-color: $colorDestaque;
+                        color: #fff;
+                    }
+
+                }
+
+            }
+
+            .boxes 
+            {
+                background-color: $bgColorFourth;
+                clear: both;
+                padding: 30px 40px;
+                height: 302px;
+                overflow: hidden;
+
+                ul 
+                {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+
+                li
+                {
+                    color: #777;
+                    font-size: $fontSizeBase * 2.7;
+                    line-height: 1em;
+                    margin-bottom: 20px;
+
+                    &::before 
+                    {
+                        content: "";
+                        background-color: #777;
+                        border-radius: 100%;
+                        display: inline-block;
+                        width: 7px;
+                        height: 7px;
+                        margin: 5px 7px;
+                    }
+
+                    &:last-child 
+                    {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .box 
+            {
+                display: none;
+                &.box-selecionada 
+                {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .ss-box-lazer 
+    {
+        @include make-lg-column(12);
+    }
+
+}
+
+.owl-galeria
+{
+    .owl-prev,
+    .owl-next 
+    {
+        background-color: $bgBtnsSlider;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        margin-top: -28px;
+    }
+    
+    .owl-prev 
+    {
+        left: -45px;
+        padding: 5px 3px 1px 2px;
+    }
+
+    .owl-next 
+    {
+        right: -45px;
+        padding: 5px 0 1px 5px;
+    }
+
+    .row-galeria 
+    {
+        height: 170px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        position: relative;
+
+        img 
+        {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+
+            &.special 
+            {
+                bottom: initial;
+                top: -80px;
+            }
+        }
+
+    }
+
+    figcaption
+    {
+        padding: 20px 0;
+        p 
+        {
+            font-size: $fontSizeBase * 2.8;
+            line-height: 1.2em;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

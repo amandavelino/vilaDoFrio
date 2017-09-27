@@ -1,0 +1,122 @@
+#ss-contato
+{
+    background-color: $bgContato;
+    padding: 30px 0 20px;
+    border-bottom: $borderBottomContato 25px solid;
+
+    .ss-box-contato 
+    {
+        @include make-lg-column(6);
+        text-align: center;
+
+        img 
+        {
+            margin: 20px auto;
+        }
+
+        .fones
+        {
+            h3 
+            {
+                color: $colorFonesContato;
+                font-size: $fontSizeBase * 7;
+                line-height: 1em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+    }
+
+    .formulario-contato
+    {
+        background-color: $bgColorPrimary;
+        box-shadow: inset 0px 0px 20px 0px rgba(17,17,17,.8);
+        overflow: hidden;
+        padding: 15px;
+        text-align: center;
+
+        .campo
+        {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 15px;
+    
+            &:last-child
+            {
+                margin-bottom: 0;
+            }   
+    
+            .input-contato 
+            {
+                background-color: transparent;
+                border: 1px solid $borderContato;
+                border-radius: 0;
+                color: #fff;
+                font-size: $fontSizeBase * 1.4;
+                line-height: 1.2em;
+                outline: none;
+                padding: 18px;
+                width: 100%;
+            }
+
+            .textarea 
+            {
+                min-height: 150px;
+                height: 150px;
+                max-height: 150px;
+            }
+
+        }
+
+        .btn-enviar 
+        {
+            margin: 8px 0;
+        }
+
+        ::-webkit-input-placeholder
+        { 
+            /* Chrome/Opera/Safari */
+            color: #fff;
+            font-size: $fontSizeBase * 1.4;
+        }
+
+        ::-moz-placeholder
+        { 
+            /* Firefox 19+ */
+            color: #fff;
+            font-size: $fontSizeBase * 1.4;
+        }
+
+        :-ms-input-placeholder
+        { 
+            /* IE 10+ */
+            color: #fff;
+            font-size: $fontSizeBase * 1.4;
+        }
+
+        :-moz-placeholder
+        { 
+            /* Firefox 18- */
+            color: #fff;
+            font-size: $fontSizeBase * 1.4;
+        }
+
+    }
+
+    .atencao-contato
+    {
+        clear: both;
+        width: 100%;
+        padding: 25px 0 0;
+
+        p 
+        {
+            color: #000;
+            margin: 0;
+            text-align: justify;
+        }
+
+    }
+
+}

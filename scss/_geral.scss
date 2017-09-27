@@ -92,3 +92,25 @@
         }
     }
 }
+
+/* Botoes */
+
+.btn-enviar
+{
+    border: 0 none;
+    border-bottom: 4px solid $bgColorThird;
+    background: transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: $fontSizeBase * 1.9;
+    font-weight: $fontWeightBold;
+    line-height: 1.2em;
+    outline: none;
+    text-transform: uppercase;
+    transition: $transitionAll;
+
+    &:hover 
+    {
+        color: $colorSubmitBtn;
+    }
+}

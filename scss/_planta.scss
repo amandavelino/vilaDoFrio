@@ -1,0 +1,21 @@
+#ss-planta
+{
+    background-color: $bgColorFifthy;
+    box-shadow: inset 0px 0px 60px 0px rgba(17,17,17,.6);
+    text-align: center;
+    padding-bottom: 40px;
+
+    header 
+    {
+        padding: 40px 0;
+        h2 
+        {
+            color: #fff;
+            font-size: $fontSizeBase * 3.6;
+            line-height: 1em;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}

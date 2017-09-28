@@ -18,4 +18,25 @@
         }
     }
 
+    img 
+    {
+        max-width: 100%;
+
+        @include breakpoint($smallDesktop)
+        {
+            width: 500px;
+        }         
+
+        @include breakpoint($tablet)
+        {
+            width: 500px;
+        }  
+        
+        @include breakpoint($largeCelular)
+        {
+            width: 500px;
+        }          
+
+    }
+
 }

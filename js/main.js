@@ -10,7 +10,20 @@ $(document).ready(function(){
         margin: 25,
         nav: true,
         navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-        smartSpeed: 600        
+        smartSpeed: 600,
+        responsive:
+        {
+            // breakpoint from 0 up
+            0 : { items: 1 },
+            // breakpoint from 480 up
+            565 : { items: 2 },
+            // breakpoint from 600 up
+            600 : { items: 3 },            
+            // breakpoint from 768 up
+            768 : { items: 3 },
+            // breakpoint from 991 up
+            992 : { items: 2 }  
+        }              
     });
 
     //Galeria Lazer

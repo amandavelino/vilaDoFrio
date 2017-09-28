@@ -6,8 +6,25 @@
 
     .ss-box-contato 
     {
+        @include make-sm-column(12);
+        @include make-md-column(6);
         @include make-lg-column(6);
         text-align: center;
+
+        @include breakpoint($tablet)
+        {
+            margin-bottom: 30px;
+        }   
+        
+        @include breakpoint($largeCelular)
+        {
+            margin-bottom: 30px;
+        }  
+
+        @include breakpoint($smallCelular)
+        {
+            margin-bottom: 30px;
+        } 
 
         img 
         {
@@ -23,6 +40,27 @@
                 line-height: 1em;
                 margin: 0;
                 padding: 0;
+
+                @include breakpoint($smallDesktop)
+                {
+                    font-size: $fontSizeBase * 6;
+                }   
+                
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 4.5;
+                }                   
+
+                @include breakpoint($largeCelular)
+                {
+                    font-size: $fontSizeBase * 3.5;
+                }   
+
+                @include breakpoint($smallCelular)
+                {
+                    font-size: $fontSizeBase * 3;
+                }   
+
             }
         }
 
@@ -58,6 +96,10 @@
                 outline: none;
                 padding: 18px;
                 width: 100%;
+                @include breakpoint($smallDesktop)
+                {
+                    padding: 15px;
+                }                  
             }
 
             .textarea 

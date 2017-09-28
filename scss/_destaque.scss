@@ -10,14 +10,61 @@
         float: left;
         margin-top: 70px;
         margin-left: 50px;
+
+        @include breakpoint($smallDesktop)
+        {
+            margin-left: 0;
+        }
+
+        @include breakpoint($tablet)
+        {
+            width: 250px;
+            margin-top: 40px;
+            margin-left: 0;
+        }
+
+        @include breakpoint($allCelular)
+        {
+            display: none;
+        }        
+
+        img 
+        {
+            max-width: 100%;
+        }
     }
 
     .imagem-destaque-topo
     {
         position: absolute;
-        top: -40px;
+        top: 0;
         left: 50%;
         margin-left: -120px;
+
+        @include breakpoint($tablet)
+        {
+            margin-top: -19px;
+            margin-left: -105px;
+        }
+
+        img 
+        {
+            @include breakpoint($tablet)
+            {
+                width: 351px;
+            }
+
+            @include breakpoint($allCelular)
+            {
+                width: 351px;
+            }
+
+            @include breakpoint($allCelular)
+            {
+                width: 250px;
+            }
+
+        }
     }
 
     .logo-02 
@@ -25,6 +72,28 @@
         float: right;
         margin-top: 40px;
         margin-right: 50px;
+
+        @include breakpoint($smallDesktop)
+        {
+            margin-right: 0;
+        }
+
+        @include breakpoint($tablet)
+        {
+            width: 130px;
+            margin-top: 20px;
+            margin-right: 0;
+        }
+
+        @include breakpoint($allCelular)
+        {
+            display: none;
+        }
+
+        img 
+        {
+            max-width: 100%;
+        }
     }
 
 }
@@ -32,10 +101,25 @@
 .destaque-bottom 
 {
     clear: both;
-    padding-top: 31px;
+    padding-top: 71px;
     overflow: hidden;
     position: relative;
     z-index: 0;
+
+    @include breakpoint($tablet)
+    {
+        padding-top: 51px;
+    }
+
+    @include breakpoint($allCelular)
+    {
+        padding-top: 51px;
+    }
+
+    @include breakpoint($allCelular)
+    {
+        padding-top: 181px;
+    }    
 
     .imagem-destaque-bottom 
     {
@@ -64,6 +148,17 @@
                 line-height: 1em;
                 margin: 0;
                 padding: 0;
+
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 3;
+                } 
+                
+                @include breakpoint($allCelular)
+                {
+                    font-size: $fontSizeBase * 3;
+                }                 
+
             }
         }
     }
@@ -75,6 +170,12 @@
         float: left;
         padding: 20px;
         width: 55%;
+
+        @include breakpoint($allCelular)
+        {
+            width: 100%;
+        } 
+
     }
 
     .col-rgt 
@@ -83,11 +184,27 @@
         float: left;
         width: 45%;
 
+        @include breakpoint($allCelular)
+        {
+            width: 100%;
+        } 
+
         .col-rgt-topo
         {
             background-color: $bgColorSecondary;
             height: 160px;
             padding: 30px 20px 0;
+
+            @include breakpoint($allCelular)
+            {
+                width: 100%;
+                height: auto;
+                float: none;
+                padding: 20px 20px 5px;
+                text-align: center;
+                overflow: hidden;
+            } 
+
         }
 
         .col-rgt-bottom
@@ -96,6 +213,28 @@
             height: 174px;
             padding: 10px 20px 20px;
             overflow: hidden;
+
+            @include breakpoint($smallDesktop)
+            {
+                padding: 20px;
+            }
+
+            @include breakpoint($tablet)
+            {
+                height: 164px;
+                padding: 30px 20px;
+            }  
+
+            @include breakpoint($allCelular)
+            {
+                width: 100%;
+                height: auto;
+                float: none;
+                padding: 20px 20px 5px;
+                text-align: center;
+                overflow: hidden;             
+            } 
+
         }
 
     }
@@ -104,6 +243,18 @@
     {
         position: relative;
         overflow: hidden;
+
+        @include breakpoint($largeCelular)
+        {
+            margin: 0 30px;
+            width: 100%;               
+        } 
+
+        @include breakpoint($smallCelular)
+        {
+            margin: 0;
+            width: 100%;
+        } 
 
         p 
         {
@@ -125,21 +276,87 @@
             text-transform: uppercase;
             overflow: hidden;
 
+            @include breakpoint($smallDesktop)
+            {
+                font-size: $fontSizeBase * 7;
+                margin-top: -15px;
+            }
+
+            @include breakpoint($tablet)
+            {
+                margin-top: 0;
+                font-size: $fontSizeBase * 5.5;
+            }
+
+            @include breakpoint($allCelular)
+            {
+                margin-top: 0;
+                font-size: $fontSizeBase * 5.5;
+            }
+
             .moeda 
             {
                 font-size: $fontSizeBase * 8;
+                
+                @include breakpoint($smallDesktop)
+                {
+                    font-size: $fontSizeBase * 7;
+                }    
+
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 5;
+                }   
+                
+                @include breakpoint($allCelular)
+                {
+                    font-size: $fontSizeBase * 5;
+                }                   
+
             }
 
             .valorNumber
             {
                 font-size: $fontSizeBase * 13.5;
                 line-height: 1em;
+
+                @include breakpoint($smallDesktop)
+                {
+                    font-size: $fontSizeBase * 10;
+                }   
+
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 8;
+                }  
+                
+                @include breakpoint($allCelular)
+                {
+                    font-size: $fontSizeBase * 8;
+                }                  
+
             }
 
             .moeda,
             .valor
             {
                 line-height: 2.2em;
+                
+                @include breakpoint($smallDesktop)
+                {
+                    line-height: 1.7em;
+                }   
+
+                @include breakpoint($tablet)
+                {
+                    line-height: 1.8em;
+                }   
+                
+                @include breakpoint($allCelular)
+                {
+                    line-height: 1.8em;
+                }   
+
             }
 
             .moeda,
@@ -147,6 +364,10 @@
             .valorNumber 
             {
                 float: left;
+                @include breakpoint($allCelular)
+                {
+                    float: none;            
+                }                 
             }
         }
 
@@ -154,6 +375,15 @@
 
     .info-seguranca 
     {
+
+        @include breakpoint($allCelular)
+        {
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto;           
+        }  
+
         .plus 
         {
             color: #fff;
@@ -161,6 +391,25 @@
             font-size: $fontSizeBase * 15;
             font-weight: $fontWeightBold;
             line-height: .65em;
+
+            @include breakpoint($smallDesktop)
+            {
+                font-size: $fontSizeBase * 8.5;
+                line-height: 1em;
+            }  
+            
+            @include breakpoint($tablet)
+            {
+                font-size: $fontSizeBase * 6;
+                line-height: 1.3em;
+            } 
+            
+            @include breakpoint($allCelular)
+            {
+                font-size: $fontSizeBase * 7;
+                line-height: .7em;
+            } 
+
         }
 
         h3 
@@ -171,10 +420,41 @@
             line-height: 1em;
             margin: 22px 5px;
 
+            @include breakpoint($smallDesktop)
+            {
+                margin: 22px 20px;
+            }  
+
+            @include breakpoint($tablet)
+            {
+                margin: 22px 5px;
+            }  
+
+            @include breakpoint($allCelular)
+            {
+                margin: 0 5px;
+            }  
+
             .txt-seguranca 
             {
                 font-size: $fontSizeBase * 5.4;
                 line-height: 1em;
+
+                @include breakpoint($smallDesktop)
+                {
+                    font-size: $fontSizeBase * 4;
+                }                  
+
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 3.5;
+                }
+                
+                @include breakpoint($allCelular)
+                {
+                    font-size: $fontSizeBase * 4.8;
+                }               
+
             }
 
             .txt-fim 
@@ -184,6 +464,22 @@
                 font-weight: $fontWeightNormal;
                 line-height: 1.2em;
                 letter-spacing: 1px;
+
+                @include breakpoint($smallDesktop)
+                {
+                    font-size: $fontSizeBase * 2.5;
+                }                 
+
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 2.2;
+                }
+                
+                @include breakpoint($allCelular)
+                {
+                    font-size: $fontSizeBase * 3;
+                }                
+
             }
 
             .selo 
@@ -191,6 +487,26 @@
                 float: left;
             }
         }
+
+        img 
+        {
+            @include breakpoint($smallDesktop)
+            {
+                width: 100px;
+            } 
+
+            @include breakpoint($tablet)
+            {
+                width: 80px;
+            } 
+
+            @include breakpoint($allCelular)
+            {
+                width: 80px;
+            } 
+
+        }
+
     }
 
 }
@@ -217,6 +533,12 @@
         display: inline-block;
         width: 49%;
 
+        @include breakpoint($tablet)
+        {
+            width: 46%;
+            margin: 0 5px;
+        } 
+
         p 
         {
             color: #fff;
@@ -232,6 +554,7 @@
             border-radius: 5px;
             outline: none;
             padding: 10px;
+            width: 100%;
         }
     }
 
@@ -247,7 +570,18 @@
     {
         width: 80%;
         float: left;
+
+        @include breakpoint($allCelular)
+        {
+            width: 100%;
+            float: none;
+        }  
     }
+
+    @include breakpoint($allCelular)
+    {
+        font-size: $fontSizeBase * 4;
+    }  
 
     h2 
     {
@@ -257,6 +591,27 @@
         margin: 0;
         padding: 0;
         text-transform: uppercase;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 7;
+        }  
+        
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 5;
+        }  
+        
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 5;
+        }  
+
+        @include breakpoint($smallCelular)
+        {
+            font-size: $fontSizeBase * 4;
+        } 
+
     }
 
     p 
@@ -264,11 +619,43 @@
         color: $colorPDestaqueBanner;
         font-size: $fontSizeBase * 3.5;
         line-height: 1.2em;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 3;
+        }         
+
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 2.5;
+        }  
+
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 2.5;
+        }  
+
     }
 
     strong 
     {
         font-size: $fontSizeBase * 5;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 4;
+        }         
+
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 3;
+        } 
+
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 3;
+        } 
+
     }
 
     .img-banner 
@@ -276,6 +663,28 @@
         float: right;
         width: 20%;
         margin: 30px 0;
+
+        img 
+        {
+            max-width: 100%;
+        }
+
+        @include breakpoint($smallDesktop)
+        {
+            margin: 15px 0;
+        }  
+        
+        @include breakpoint($tablet)
+        {
+            margin: 20px 0;
+        }  
+        
+        @include breakpoint($allCelular)
+        {
+            width: 100%;
+            float: none;
+        }          
+
     }
 
 }

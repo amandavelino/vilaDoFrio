@@ -36,7 +36,7 @@
 
                 </fieldset>             
 
-                <input type="submit" class="btn-enviar" value=" Enviar ">
+                <input type="submit" class="btn-enviar" value=" Clique e garanta o seu ">
 
             </form>
 

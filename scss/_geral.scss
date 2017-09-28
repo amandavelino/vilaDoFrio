@@ -108,7 +108,11 @@
     outline: none;
     text-transform: uppercase;
     transition: $transitionAll;
-
+    @include breakpoint($smallDesktop)
+    {
+        font-size: $fontSizeBase * 1.8;
+    } 
+    
     &:hover 
     {
         color: $colorSubmitBtn;

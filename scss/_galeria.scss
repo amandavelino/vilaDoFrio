@@ -24,6 +24,29 @@
                 line-height: 1em;
                 margin: 0;
                 padding: 0;
+
+                @include breakpoint($smallDesktop)
+                {
+                    font-size: $fontSizeBase * 3.2;
+                }   
+                
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 2.7;
+                }   
+
+                @include breakpoint($largeCelular)
+                {
+                    font-size: $fontSizeBase * 2.3;
+                    margin: 0 40px;
+                }   
+
+                @include breakpoint($smallCelular)
+                {
+                    font-size: $fontSizeBase * 2;
+                    margin: 0 40px;
+                } 
+
             }
         }
     }
@@ -31,13 +54,46 @@
     .ss-box-apartamento
     {
         width: 50%;
-        float: left;
+        float: left;     
+
+        @include breakpoint($tablet)
+        {
+            width: 100%;
+        }
+        
+        @include breakpoint($largeCelular)
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        @include breakpoint($smallCelular)
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
     }
 
     .ss-box-informacoes
     {
         width: 43%;
         float: right;
+
+        @include breakpoint($tablet)
+        {
+            width: 100%;
+        }  
+        
+        @include breakpoint($largeCelular)
+        {
+            width: 100%;
+        }  
+        
+        @include breakpoint($smallCelular)
+        {
+            width: 100%;
+        }          
     }
 
     .ss-box-informacoes 
@@ -68,6 +124,17 @@
                     position: relative;
                     text-align: center;
                     transition: $transitionAll3s;
+
+                    @include breakpoint($smallDesktop)
+                    {
+                        font-size: $fontSizeBase * 1.3;
+                    }                 
+
+                    @include breakpoint($smallCelular)
+                    {
+                        font-size: $fontSizeBase * 1.2;
+                        padding: 25px 0;
+                    }    
 
                     &::after 
                     {
@@ -114,6 +181,29 @@
                 height: 302px;
                 overflow: hidden;
 
+                @include breakpoint($smallDesktop)
+                {
+                    padding: 20px 40px;
+                    height: 263px;
+                }
+
+                @include breakpoint($tablet)
+                {
+                    height: auto;
+                    min-height: 250px;
+                }
+
+                @include breakpoint($largeCelular)
+                {
+                    height: auto;
+                    min-height: 250px;
+                }
+
+                @include breakpoint($smallCelular)
+                {
+                    height: auto;
+                }                
+
                 ul 
                 {
                     margin: 0;
@@ -127,6 +217,30 @@
                     font-size: $fontSizeBase * 2.7;
                     line-height: 1em;
                     margin-bottom: 20px;
+
+                    @include breakpoint($smallDesktop)
+                    {
+                        font-size: $fontSizeBase * 2.2;
+                        margin-bottom: 15px;
+                    }
+
+                    @include breakpoint($tablet)
+                    {
+                        font-size: $fontSizeBase * 2.2;
+                        margin-bottom: 15px;
+                    }
+
+                    @include breakpoint($largeCelular)
+                    {
+                        font-size: $fontSizeBase * 2.2;
+                        margin-bottom: 15px;
+                    }
+
+                    @include breakpoint($smallCelular)
+                    {
+                        font-size: $fontSizeBase * 2.2;
+                        margin-bottom: 15px;
+                    }                    
 
                     &::before 
                     {
@@ -162,6 +276,7 @@
     .ss-box-lazer 
     {
         @include make-lg-column(12);
+        clear: both;
     }
 
 }
@@ -177,18 +292,85 @@
         top: 50%;
         width: 30px;
         margin-top: -28px;
+
+        @include breakpoint($smallDesktop)
+        {
+            top: 0;
+            margin-top: -70px;
+        } 
+        
+        @include breakpoint($tablet)
+        {
+            top: 0;
+            margin-top: -70px;
+        }        
+        
+        @include breakpoint($largeCelular)
+        {
+            top: 0;
+            margin-top: -70px;
+        }           
+
+        @include breakpoint($smallCelular)
+        {
+            top: 0;
+            margin-top: -70px;
+        }  
+
     }
     
     .owl-prev 
     {
         left: -45px;
         padding: 5px 3px 1px 2px;
+
+        @include breakpoint($smallDesktop)
+        {
+            left: 0;
+        }  
+        
+        @include breakpoint($tablet)
+        {
+            left: 0;
+        }      
+        
+        @include breakpoint($largeCelular)
+        {
+            left: 0;
+        }           
+
+        @include breakpoint($smallCelular)
+        {
+            left: 0;
+        }   
+
     }
 
     .owl-next 
     {
         right: -45px;
-        padding: 5px 0 1px 5px;
+        padding: 5px 2px 1px 5px;
+
+        @include breakpoint($smallDesktop)
+        {
+            right: 0;
+        } 
+        
+        @include breakpoint($tablet)
+        {
+            right: 0;
+        } 
+
+        @include breakpoint($largeCelular)
+        {
+            right: 0;
+        } 
+
+        @include breakpoint($smallCelular)
+        {
+            right: 0;
+        } 
+
     }
 
     .row-galeria 
@@ -197,6 +379,26 @@
         overflow: hidden;
         margin-bottom: 25px;
         position: relative;
+
+        @include breakpoint($smallDesktop)
+        {
+            height: 150px;
+        }
+
+        @include breakpoint($tablet)
+        {
+            height: 150px;
+        }
+
+        @include breakpoint(600px 767px)
+        {
+            height: 118px;
+        }
+
+        @include breakpoint(0 564px)
+        {
+            height: 250px;
+        }
 
         img 
         {
@@ -223,6 +425,27 @@
             line-height: 1.2em;
             margin: 0;
             padding: 0;
+
+            @include breakpoint($smallDesktop)
+            {
+                font-size: $fontSizeBase * 2.5;
+            } 
+            
+            @include breakpoint($tablet)
+            {
+                font-size: $fontSizeBase * 2.5;
+            }             
+
+            @include breakpoint($largeCelular)
+            {
+                font-size: $fontSizeBase * 2.3;
+            } 
+
+            @include breakpoint($smallCelular)
+            {
+                font-size: $fontSizeBase * 2.2;
+            } 
+
         }
     }
 }

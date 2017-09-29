@@ -1,4 +1,4 @@
-<section id="ss-planta">
+<section id="planta" class="ss-planta">
 
     <div class="container">
 

@@ -1,4 +1,4 @@
-<section id="ss-galeria">
+<section id="informacoes" class="ss-galeria">
 
     <div class="container">
 
@@ -120,25 +120,37 @@
 
                         <div id="aba-1" class="box box-selecionada">
                             <ul>
-                                <li>18 Torres.</li>
-                                <li>08 pavimentos: térreo + 07 pavimentos.</li>
-                                <li>04 apartamentos por andar.</li>
-                                <li>1 vaga de garagem.</li>
-                                <li>1 elevador.</li>
+                                <li>18 Torres</li>
+                                <li>08 pavimentos: térreo + 07 pavimentos</li>
+                                <li>04 apartamentos por andar</li>
+                                <li>1 vaga de garagem</li>
+                                <li>1 elevador</li>
                             </ul>
                         </div>
                         <!-- end .box -->
 
                         <div id="aba-2" class="box">
                             <ul>
-                                <li>Aba Lazer</li>
+                                <li>Pista de cooper</li>
+                                <li>Salão de festas</li>
+                                <li>Espaço para academia</li>
+                                <li>Espaço gourmet</li>
+                                <li>Playground</li>
+                                <li>Piscinas adulto e infantil</li>
+                                <li>Quadra poliesportiva</li>
                             </ul>
                         </div>
                         <!-- end .box -->  
                         
                         <div id="aba-3" class="box">
                             <ul>
-                                <li>Aba Apartamento</li>
+                                <li>Apts. com áreas de  62.88m² e  63.29m²</li>
+                                <li>03 quartos (1 suíte)</li>
+                                <li>Varanda</li>
+                                <li>WC social</li>
+                                <li>WC suíte</li>
+                                <li>Área de serviço</li>
+                                <li>Cozinha</li>
                             </ul>
                         </div>
                         <!-- end .box -->                          

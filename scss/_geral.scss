@@ -58,6 +58,23 @@
         font-weight: $fontWeightBold;
     }
 
+    main 
+    {
+        position: relative;
+        padding-top: 71px;
+
+        @include breakpoint($tablet)
+        {
+            padding-top: 91px;
+        }
+
+        @include breakpoint($allCelular)
+        {
+            padding-top: 80px;
+        }
+
+    }
+
 /* Redes sociais */    
 
 .redes-sociais

@@ -31,7 +31,7 @@
 
             <div class="col-row">
 
-                <div class="col-destaque col-lft">
+                <div id="cadastre-se" class="col-destaque col-lft">
 
                     <header>
                         <h3>Cadastre-se agora!</h3>

@@ -1,8 +1,30 @@
+#hd-principal
+{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 90;
+    overflow: hidden;
+
+    @include breakpoint($allCelular)
+    {
+        height: 78px;
+    }
+}
+
 .ct-menu 
 {
     text-align: center;
     position: relative;
     z-index: 20;
+
+    @include breakpoint($allCelular)
+    {
+        background-color: $bgColorPrimary;
+        margin: 0 -15px;
+    }
 
     .redes-sociais 
     {
@@ -17,17 +39,42 @@
     background-color: transparent;
     border: 0 none;
     display: inline-block;
+    position: relative;
+    text-align: left;
+
+    @include breakpoint($allCelular)
+    {
+        display: block;
+        padding: 15px;
+        margin: 15px 0;
+        width: 100%;
+    }
 
     .nav-menu 
     {
         display: inline-block;
         padding: 0;
         margin: 20px 0;
+        
+        @include breakpoint($allCelular)
+        {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
         li 
         {
             display: inline-block;
             margin: 0 20px;
+
+            @include breakpoint($allCelular)
+            {
+                display: block;
+                width: 100%;
+                margin: 0;
+                text-align: right;
+            }
 
             a 
             {
@@ -40,6 +87,12 @@
                 text-transform: uppercase;
                 transition: $transitionAll;
     
+                @include breakpoint($allCelular)
+                {
+                    color: #fff;
+                    padding-bottom: 10px;
+                }
+
                 &::before 
                 {
                     content: "";
@@ -50,6 +103,12 @@
                     left: 50%;
                     bottom: 0;
                     transition: $transitionAll3s;
+
+                    @include breakpoint($allCelular)
+                    {
+                        display: none;
+                    }
+
                 }
     
                 &.ativo,
@@ -66,6 +125,12 @@
     
             &.especial 
             {
+
+                @include breakpoint($allCelular)
+                {
+                    display: none;
+                }
+
                 a  
                 {
                     font-size: $fontSizeBase * 1.7;
@@ -90,4 +155,71 @@
 
     }
 
+}
+
+/* Menu Mobile */
+
+#logo-mobile
+{
+    display: none;
+    
+    @include breakpoint($allCelular)
+    {
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+#face-icon
+{
+    display: none;
+    font-size: $fontSizeBase * 1.7;
+    position: absolute;
+    right: 70px;
+    top: 30px;
+
+    @include breakpoint($allCelular)
+    {
+        display: block;
+    }
+
+    a 
+    {
+        color: $menuColor;
+    }
+
+}
+
+#menu-mobile
+{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: none;
+    border: 0 none;
+    border-radius: 0;
+    outline: none;
+        
+    @include breakpoint($allCelular)
+    {
+        display: block;
+    }
+
+    .icon-bar
+    {
+        background-color: $bgColorPrimary;
+        display: block;
+        width: 35px;
+        height: 5px;
+
+        & + .icon-bar
+        {
+            margin-top: 4px;
+        }
+
+    }
 }

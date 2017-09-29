@@ -1,4 +1,57 @@
+var botaoMenu = $("#menu-mobile"),
+header = $("#hd-principal"),
+menu = $(".nav-menu"),
+logo = $(".logo > img"),
+scrolled = $(window).scrollTop();
+
+function goToSessao(e)
+{
+    var sessao = $(e).offset().top - 71;
+    $("html, body").stop().animate({ scrollTop: sessao }, 700, "easeInOutQuad", function(){});
+}//end goToSessao
+
+function openMenu()
+{
+    header.stop().animate({
+        height: "240px"
+    }, 500, "easeInOutQuad", function() {
+        $(this).addClass("menu-ativo");
+    }); 
+}//end openMenu
+
+function closeMenu()
+{
+    header.stop().animate({
+        height: "78px"
+    }, 500, "easeInOutQuad", function() {
+        $(this).removeClass("menu-ativo");
+    });  
+}//end closeMenu
+
 $(document).ready(function(){
+
+    $(menu).find(".link-menu").click(function(event)
+    {
+        closeMenu();
+        var sessao = $(this).attr("href");
+        $(".ativo").removeClass("ativo");
+        if(!$(this).hasClass("ativo")){
+            $(this).addClass("ativo");
+        }//end if
+        goToSessao(sessao);
+        return false;
+    });//
+
+    //Menu Mobile
+    botaoMenu.click(function(){
+
+        if(!header.hasClass("menu-ativo")){
+            openMenu();
+        }else{
+            closeMenu();
+        }
+        return false;
+    });//
 
     //Galeria Apartamento
     $('.owl-galeria-apartamento').owlCarousel({
@@ -15,13 +68,13 @@ $(document).ready(function(){
         {
             // breakpoint from 0 up
             0 : { items: 1 },
-            // breakpoint from 480 up
+            // breakpoint from 565 up
             565 : { items: 2 },
             // breakpoint from 600 up
             600 : { items: 3 },            
             // breakpoint from 768 up
             768 : { items: 3 },
-            // breakpoint from 991 up
+            // breakpoint from 992 up
             992 : { items: 2 }  
         }              
     });

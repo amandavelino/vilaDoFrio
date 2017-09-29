@@ -11,36 +11,58 @@
 </head>
 <body>
 
-    <div class="ss-wrapper">
+    <div id="home" class="ss-wrapper">
 
-        <div class="container">
+        <header id="hd-principal">
 
-            <div class="ct-menu">
+            <div class="container">
 
-                <nav class="menu">
+                <div id="logo-mobile">
+                    <a href="#home">
+                        <img src="./imgs/vila-do-frio-logo-mb.png" alt="Vila do Frio - Condomínio Clube" border="0">
+                    </a>
+                </div>
+                <!-- #logo-mobile -->
 
-                    <ul class="nav-menu">
-                        <li><a class="ativo" href="#">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Cadastre-se</a></li>
-                        <li><a href="#">Informações</a></li>
-                        <!-- <li class="espaco-left"><a href="#">Localização</a></li>                     -->
-                        <li><a href="#">Plantas</a></li>
-                        <li><a href="#">Contato</a></li> 
-                        <li class="especial">
-                            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>                                             
+                <span id="face-icon">
+                    <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </span>
+
+                <button type="button" id="menu-mobile">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="ct-menu">
+
+                    <nav class="menu">
+
+                        <ul class="nav-menu">
+                            <li><a class="ativo link-menu" href="#home">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a class="link-menu" href="#cadastre-se">Cadastre-se</a></li>
+                            <li><a class="link-menu" href="#informacoes">Informações</a></li>
+                            <!-- <li class="espaco-left"><a href="#">Localização</a></li>                     -->
+                            <li><a class="link-menu" href="#planta">Plantas</a></li>
+                            <li><a class="link-menu" href="#contato">Contato</a></li> 
+                            <li class="especial">
+                                <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>                                             
+                        </ul>
+                        <!-- /.nav-menu -->
+
+                    </nav>
+                    <!-- /.navbar-default -->
+
+                    <ul class="redes-sociais">  
+    
                     </ul>
-                    <!-- /.nav-menu -->
+                    <!-- /.redes-sociais -->   
 
-                </nav>
-                <!-- /.navbar-default -->
+                </div>
+                <!-- /.ct-menu -->
 
-                <ul class="redes-sociais">  
-  
-                </ul>
-                <!-- /.redes-sociais -->   
+            </div><!-- /.container -->  
 
-            </div>
-            <!-- /.ct-menu -->
-
-        </div><!-- /.container -->        
+        </header>      
